@@ -47,7 +47,7 @@ public class HttpClientTest {
         try {
             Map<String, String> data = new HashMap<>();
             data.put("title", "Test Post");
-            data.put("body", "This is a test post created by HttpClient");
+            data.put("body", "Dima");
             data.put("userId", "1");
 
             Map<String, String> headers = new HashMap<>();
@@ -70,7 +70,7 @@ public class HttpClientTest {
             Map<String, String> data = new HashMap<>();
             data.put("id", "1");
             data.put("title", "Updated Post");
-            data.put("body", "This post has been updated by HttpClient");
+            data.put("body", "Dimasik");
             data.put("userId", "1");
 
             Map<String, String> headers = new HashMap<>();
@@ -93,7 +93,13 @@ public class HttpClientTest {
             Map<String, String> headers = new HashMap<>();
             headers.put("User-Agent", "HttpClientTest/1.0");
 
-            String response = httpClient.delete("http://127.0.0.1:8080/hello", headers, null);
+            Map<String, String> data = new HashMap<>();
+            data.put("id", "1");
+            data.put("title", "Updated Post");
+            data.put("body", "Dimasik");
+            data.put("userId", "1");
+
+            String response = httpClient.delete("http://127.0.0.1:8080/hello", headers, data);
             System.out.println("DELETE Response: " + response);
             
         } catch (Exception e) {
