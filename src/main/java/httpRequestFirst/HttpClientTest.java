@@ -31,7 +31,7 @@ public class HttpClientTest {
             Map<String, String> headers = new HashMap<>();
             headers.put("User-Agent", "HttpClientTest/1.0");
 
-            String response = httpClient.get("https://httpbin.org/get", headers, params);
+            String response = httpClient.get("http://127.0.0.1:8080/hello", headers, params);
             System.out.println("GET Response: " + response.substring(0, Math.min(200, response.length())) + "...");
             
         } catch (Exception e) {
@@ -53,7 +53,7 @@ public class HttpClientTest {
             Map<String, String> headers = new HashMap<>();
             headers.put("User-Agent", "HttpClientTest/1.0");
 
-            String response = httpClient.post("https://jsonplaceholder.typicode.com/posts", headers, data);
+            String response = httpClient.post("http://127.0.0.1:8080/hello", headers, data);
             System.out.println("POST Response: " + response);
             
         } catch (Exception e) {
@@ -76,7 +76,7 @@ public class HttpClientTest {
             Map<String, String> headers = new HashMap<>();
             headers.put("User-Agent", "HttpClientTest/1.0");
 
-            String response = httpClient.put("https://jsonplaceholder.typicode.com/posts/1", headers, data);
+            String response = httpClient.put("http://127.0.0.1:8080/hello", headers, data);
             System.out.println("PUT Response: " + response);
             
         } catch (Exception e) {
@@ -93,7 +93,7 @@ public class HttpClientTest {
             Map<String, String> headers = new HashMap<>();
             headers.put("User-Agent", "HttpClientTest/1.0");
 
-            String response = httpClient.delete("https://jsonplaceholder.typicode.com/posts/1", headers, null);
+            String response = httpClient.delete("http://127.0.0.1:8080/hello", headers, null);
             System.out.println("DELETE Response: " + response);
             
         } catch (Exception e) {
